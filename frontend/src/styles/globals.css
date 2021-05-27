@@ -15,7 +15,12 @@ body {
 
 :root{
   --primary-color: #0f151c;
-  --secundary-color: #3b163c;
+  --secundary-color: #491c4a;
+  --secundary-color-hover: #3b163c;
+  --secundary-color-light: #752c77;
+  --black: #090c10;
+  --white: #f6f4f4;
+
 }
 
 a {
@@ -25,6 +30,15 @@ a {
 
 
 /*
+Palheta Junção 
+#090c10
+#0f151c
+#3b163c
+#491c4a
+#752c77
+#f6f4f4
+
+
 Palheta 01
 #200F21
 #382039
@@ -51,11 +65,5 @@ Palheta 04
 #f6f4f4
 
 
-Palheta Junção 
-#090c10
-#0f151c
-#3b163c
-#491c4a
-#752c77
 */
 

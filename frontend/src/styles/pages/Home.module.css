@@ -1,0 +1,137 @@
+.containerContent{
+    display: grid;
+    grid-template-rows: 8vh 92vh;
+}
+.header{
+    grid-area: top;
+    display: grid;
+    grid-template-columns: 1.1fr 4fr;
+    background-color: var(--primary-color);
+}
+
+.main{
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1.1fr 4fr;
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    height: 10vh;
+}
+
+.containerContent{
+    grid-template-areas: 
+    "top"
+    "content"
+    "footer"
+    ;
+}
+
+.header .headerLogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.5px solid var(--secundary-color);
+}
+
+.header .headerTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+.header .headerTop .headerTopInformations{
+    display: flex;
+    width: 20rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.main .mainLateral{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    overflow-y: scroll;
+}
+
+.main .mainCenter{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;    
+}
+
+.main .mainCenter .controlPreviouNext{
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.main .mainCenter .controlPreviouNext .controlActionsPrevious, .controlActionsNext{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main .mainCenter .controlPreviouNext .controlActionsPrevious>img, .controlActionsNext>img{
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.main .mainCenter .controlPreviouNext .controlActionsPrevious:hover, .controlActionsNext:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.main .mainCenter .controlPreviouNext .controlActionsNext{
+   justify-content: flex-end;
+   border-left: 1px solid var(--secundary-color);
+}
+
+.main .mainCenter .controlPreviouNext .controlActionsPrevious .paginationMedia, .controlActionsNext .paginationMedia{
+    display: flex;
+    flex-direction: column;
+}
+
+.main .mainCenter .containerMedia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 6rem 6rem 6rem;
+}
+.main .mainCenter .containerMedia>span{
+    margin-top: 2rem;
+    font-size: 3rem;    
+}
+
+
+
+.icons{
+    max-width: 2rem;
+    max-height: 2rem;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .main .mainLateral{
+        display: none;
+    }
+
+    .main{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+

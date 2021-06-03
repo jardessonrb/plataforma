@@ -1,5 +1,7 @@
 import styles from '../styles/pages/Home.module.css'
-import { Player } from 'video-react';
+import { BsBell, BsBoxArrowInRight, BsBoxArrowInLeft } from 'react-icons/bs';
+import { FolderFileMedia } from '../components/FolderFileMedia';
+import { MainAside } from '../components/MainAside';
 
 export default function Home() {
   return (
@@ -10,7 +12,7 @@ export default function Home() {
             </div>
             <div className={styles.headerTop}> 
                 <div className={styles.headerTopInformations}>
-                    <img src="./assets/notification.svg" alt="notificação" className={styles.icons}/>
+                    <BsBell className={styles.icons}/>
                     <div className={styles.headerTopDataUser} >
                         <span>Nome do usuario</span>
                     </div>
@@ -19,35 +21,25 @@ export default function Home() {
         </div>
         <div className={styles.main}>
             <div className={styles.mainLateral}>
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
-              <p>Conteudo lateral</p> 
+                <div className={styles.mainAside}>
+                    <MainAside />
+                </div>
+                <FolderFileMedia />
+                <FolderFileMedia />
+                <FolderFileMedia />
+                <FolderFileMedia />
+                <FolderFileMedia />
+                <FolderFileMedia />
+                <FolderFileMedia />
+                <FolderFileMedia />
+                <FolderFileMedia />
+                <FolderFileMedia />
+                <FolderFileMedia />
             </div>
             <div className={styles.mainCenter}>
                 <div className={styles.controlPreviouNext}>
                     <div className={styles.controlActionsPrevious}>
-                        <img src="./assets/previous-media.svg" alt="previou" className={styles.icons}/>
+                        <BsBoxArrowInLeft className={styles.icons}/>
                         <div className={styles.paginationMedia}>
                             <span>Aula anterior</span>
                             <span>Aula sobre listas encadeadas 01</span>
@@ -58,21 +50,16 @@ export default function Home() {
                             <span>Proxima aula </span>
                             <span>Aula sobre listas encadeadas 03</span>
                         </div>
-                        <img src="./assets/next-media.svg" alt="previou" className={styles.icons}/>
+                        <BsBoxArrowInRight className={styles.icons}/>
                     </div>
                 </div>
                 <div className={styles.containerMedia}>
                     <video controls>
-                        <source src="https://www.youtube.com/watch?v=jIM87UqOq3g"
-                                type="video/mp4"
+                        <source 
+                            src="mp4-listas-encadeadas.mp4"
+                            type="video/mp4"
                         />
                     </video>
-
-                    {/* <Player
-                        playsInline
-                        poster=""
-                        src="https://www.loom.com/share/ff96d0b8851545df8d659637f69ae8b5"
-                    /> */}
                     <span>Aula sobre listas encadeadas 02</span>
                 </div>
             </div>

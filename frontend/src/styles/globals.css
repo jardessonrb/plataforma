@@ -11,18 +11,20 @@
   --secundary-color: #491c4a;
   --secundary-color-hover: #3b163c;
   --secundary-color-light: #752c77;
-  --white: #f6f4f4;
-  --laranja: #ff7517;
+  --white: #fffbfb;
+  --gray: #474646;
+  --orange: #ff7517;
+  --green: #058646;
 }
 
 h1, h2, h3, h4, p{
   font-size: 2rem;
-  color: var(--laranja);
+  color: var(--orange);
 }
 
 span{
   font-size: 1.5rem;
-  color: var(--laranja);
+  color: var(--orange);
 }
 
 a {

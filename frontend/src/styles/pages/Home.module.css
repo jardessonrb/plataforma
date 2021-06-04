@@ -51,7 +51,25 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
 
+.header .headerTop .headerTopInformations .notification{
+    position: relative;
+    cursor: pointer;
+}
+
+.header .headerTop .headerTopInformations .notification span{
+    font-size: 1.1rem;
+    position: absolute;
+    background-color: var(--orange);
+    color: var(--white);
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;   
+    margin-left: -0.9rem; 
+    margin-top: -0.5rem;
 }
 
 .main .mainLateral{

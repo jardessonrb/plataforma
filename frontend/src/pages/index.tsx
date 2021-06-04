@@ -1,7 +1,7 @@
 import styles from '../styles/pages/Home.module.css'
 import { BsBell, BsBoxArrowInRight, BsBoxArrowInLeft } from 'react-icons/bs';
 import { FolderFileMedia } from '../components/FolderFileMedia';
-import { MainAside } from '../components/MainAside';
+import { MainAsideInformationProgress } from '../components/MainAsideInformationProgress';
 
 export default function Home() {
   return (
@@ -12,7 +12,10 @@ export default function Home() {
             </div>
             <div className={styles.headerTop}> 
                 <div className={styles.headerTopInformations}>
-                    <BsBell className={styles.icons}/>
+                    <div className={styles.notification}>
+                        <BsBell className={styles.icons}/>
+                        <span>3</span>
+                    </div>
                     <div className={styles.headerTopDataUser} >
                         <span>Nome do usuario</span>
                     </div>
@@ -22,7 +25,7 @@ export default function Home() {
         <div className={styles.main}>
             <div className={styles.mainLateral}>
                 <div className={styles.mainAside}>
-                    <MainAside />
+                    <MainAsideInformationProgress />
                 </div>
                 <FolderFileMedia />
                 <FolderFileMedia />

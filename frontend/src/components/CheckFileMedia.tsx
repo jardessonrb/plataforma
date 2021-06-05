@@ -7,15 +7,17 @@ type DataFileMedia = {
     nameClassRoom: string;
 }
 
-export function CheckFileMedia(props: any){
+const CheckFileMedia: React.FC<DataFileMedia> = ({isVisualized, nameClassRoom}) => {
     return (
         <div className={styles.containerContent}>
             <div className={styles.content}>
-                {props.data.isVisualized ? (<FiCheckCircle className={styles.iconsCheck}/>) : (<BsCircle className={styles.iconCircle}/>)}
+                {isVisualized ? (<FiCheckCircle className={styles.iconsCheck}/>) : (<BsCircle className={styles.iconCircle}/>)}
                 <span className={styles.spanNameClassRoom}>
-                    {props.data.nameClassRoom}
+                    {nameClassRoom}
                 </span>
             </div>
         </div>
     );
 }
+
+export default CheckFileMedia;

@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { VscFolder, VscFolderOpened } from 'react-icons/vsc';
 import styles from '../styles/components/FolderFileMedia.module.css';
-import { CheckFileMedia } from './CheckFileMedia';
+import CheckFileMedia  from './CheckFileMedia';
 
 
 export function FolderFileMedia(){ 
-    const [hidden, setHidden] = useState(false);
-    const [isIconFolderOpen, setIsIconFolderOpen] = useState(false);
+    const [hidden, togglerHidden] = useState(false);
+    const [isIconFolderOpen, togglerIsIconFolderOpen] = useState(false);
 
     function updateVisibilityContainer(){
-        setHidden(!hidden);
-        setIsIconFolderOpen(!isIconFolderOpen);
+        togglerHidden(!hidden);
+        togglerIsIconFolderOpen(!isIconFolderOpen);
     }
     
     return (
@@ -24,12 +24,12 @@ export function FolderFileMedia(){
                 <span className={styles.progressModule}>3 / 6</span>
             </div>
             <div className={(hidden == true ? styles.mainFileVisible : styles.mainFileInvisible)}>
-                <CheckFileMedia data={{isVisualized: true, nameClassRoom: "aula sobre listas encadeadas 1 com alguns exemplos praticos"}}/>
-                <CheckFileMedia data={{isVisualized: true, nameClassRoom: "aula sobre listas encadeadas 2"}}/>
-                <CheckFileMedia data={{isVisualized: true, nameClassRoom: "aula sobre listas encadeadas 3"}}/>
-                <CheckFileMedia data={{isVisualized: false, nameClassRoom: "aula sobre listas encadeadas 4"}}/>
-                <CheckFileMedia data={{isVisualized: false, nameClassRoom: "aula sobre listas encadeadas 5"}}/>
-                <CheckFileMedia data={{isVisualized: false, nameClassRoom: "aula sobre listas encadeadas 6"}}/>
+                <CheckFileMedia {...{isVisualized: true, nameClassRoom: "aula sobre listas encadeadas 1 com alguns exemplos praticos"}}/>
+                <CheckFileMedia {...{isVisualized: false, nameClassRoom: "aula sobre listas encadeadas 4"}}/>
+                <CheckFileMedia {...{isVisualized: true, nameClassRoom: "aula sobre listas encadeadas 1 com alguns exemplos praticos"}}/>
+                <CheckFileMedia {...{isVisualized: false, nameClassRoom: "aula sobre listas encadeadas 4"}}/>
+                <CheckFileMedia {...{isVisualized: true, nameClassRoom: "aula sobre listas encadeadas 1 com alguns exemplos praticos"}}/>
+                <CheckFileMedia {...{isVisualized: false, nameClassRoom: "aula sobre listas encadeadas 4"}}/>                
             </div>
         </div>
     );

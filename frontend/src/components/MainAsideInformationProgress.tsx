@@ -1,6 +1,5 @@
 import styles from '../styles/components/MainAsideInformationProgress.module.css'
 
-
 export function MainAsideInformationProgress(){
 
     return(

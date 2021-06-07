@@ -36,24 +36,18 @@ button{
   cursor: pointer;
 }
 
-a{
-  color: inherit;/*pega a estilização do container que ele está*/
-  text-decoration: none;
-}
-
 html, body{
   font-size: 65.6%;
   background: var(--backgroud);
   font-family: 'Nunito', sans-serif, Roboto;
-  /*color: var(--text);*/
 }
-
 
 @media(max-width: 700px) {
   html{
       font-size: 50%;
   }
 }
+
 @media(max-width: 600px) {
   html{
       font-size: 45%;

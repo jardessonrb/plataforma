@@ -1,26 +1,30 @@
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  padding: 0;
+*{
   margin: 0;
-  font-family: 'Nunito', sans-serif, Roboto;
-  font-size: 65.6%;
-  background-color: #272121;
-  color: #e16428;
-  font-size: 30px;
-  
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root{
+  --backgroud: #090c10;
   --primary-color: #0f151c;
+  --primary-color-light: #18293a;
   --secundary-color: #491c4a;
   --secundary-color-hover: #3b163c;
   --secundary-color-light: #752c77;
-  --black: #090c10;
-  --white: #f6f4f4;
+  --white: #fffbfb;
+  --gray: #474646;
+  --orange: #ff7517;
+  --green: #058646;
+}
 
+h1, h2, h3, h4, p{
+  font-size: 2rem;
+  color: var(--orange);
+}
+
+span{
+  font-size: 1.5rem;
+  color: var(--orange);
 }
 
 a {
@@ -28,42 +32,24 @@ a {
   text-decoration: none;
 }
 
+button{
+  cursor: pointer;
+}
 
-/*
-Palheta Junção 
-#090c10
-#0f151c
-#3b163c
-#491c4a
-#752c77
-#f6f4f4
+html, body{
+  font-size: 65.6%;
+  background: var(--backgroud);
+  font-family: 'Nunito', sans-serif, Roboto;
+}
 
+@media(max-width: 700px) {
+  html{
+      font-size: 50%;
+  }
+}
 
-Palheta 01
-#200F21
-#382039
-#5A3D5C
-#F638DC
-#f6f4f4
-
-Palheta 02
-#525252
-#414141
-#313131
-#ca3e47
-
-Palheta 03
-#363333
-#272121
-#e16428
-#f6e9e9
-
-Palheta 04
-#ff7517
-#3e3939
-#2c2727
-#f6f4f4
-
-
-*/
-
+@media(max-width: 600px) {
+  html{
+      font-size: 45%;
+  }
+}

@@ -3,10 +3,10 @@ import InputPlaceholderUp from '../components/InputPlaceholderUp';
 import styles from '../styles/pages/Login.module.css';
 
 export default function Login(){
-    const [typeInput, togglerTypeInput] = useState("password");
+    const [typeInput, togglerTypeInput] = useState(false);
 
-    function togglerType(){
-        typeInput == "password" ? togglerTypeInput("text") : togglerTypeInput("password");
+    function toggleVisibilityInputContent(){
+        togglerTypeInput(!typeInput);
     }
 
     return(
@@ -22,10 +22,10 @@ export default function Login(){
                     <InputPlaceholderUp label="Sua senha" type={typeInput}/>
                     <div className={styles.areaPasswordActions}>
                         <div>
-                            <input type="checkbox" onClick={togglerType}/>
+                            <input type="checkbox" onClick={toggleVisibilityInputContent}/>
                             <span>Mostrar minha senha</span>
                         </div>
-                        <a href="#">Hi, esqueci minha senha !</a>
+                        <a href="#">Esqueci minha senha !</a>
                     </div>
                     <button className={styles.button}>Entrar</button>
                 </div>

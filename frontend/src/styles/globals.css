@@ -55,7 +55,7 @@ html, body{
   }
 }
 
-@media(max-width: 414px) {
+@media(max-width: 450px) {
   html{
       font-size: 55%;
   }

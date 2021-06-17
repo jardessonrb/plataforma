@@ -1,10 +1,6 @@
-# DesafioNave
-  Desafio de seleção para vaga de estágio Backend Nave
+# Desafio Plataforma CodeMiner 42
  
- # Questões Teste de lógica 
-   Para acessar as questões do teste de lógica acesse o link: https://codesandbox.io/s/teste-estagio-template-forked-rnx7h?file=/index.html.
-
- # Desafio Backend
+ #Plataforma Backend
  
  Esse projeto foi desenvolvido com node.js, utilizando as seguintes dependências: 
   

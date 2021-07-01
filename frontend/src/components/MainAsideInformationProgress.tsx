@@ -1,15 +1,21 @@
 import styles from '../styles/components/MainAsideInformationProgress.module.css'
 
-export function MainAsideInformationProgress(){
+type PropsTypes = {
+  countLessons: number,
+  viewsLessons: number
+}
+
+export function MainAsideInformationProgress({countLessons, viewsLessons}: PropsTypes){
+    const percent = viewsLessons * 100 / countLessons;
 
     return(
         <div className={styles.containerContent}>
             <div className={styles.circleProgress}>
-                <span>45%</span>
+                <span>{percent}%</span>
             </div>
             <div className={styles.dataCourseProgress}>
                 <span className={styles.nameCourse}>Estrutura de dados básico, médio e avançado</span>
-                <span className={styles.attendedClasses}>Você já concluiu 50 aulas de 120.</span>
+                <span className={styles.attendedClasses}>Você já concluiu {viewsLessons} aulas de {countLessons}.</span>
             </div>
         </div>
     );

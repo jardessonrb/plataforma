@@ -3,33 +3,50 @@ import { VscFolder, VscFolderOpened } from 'react-icons/vsc';
 import styles from '../styles/components/FolderFileMedia.module.css';
 import CheckFileMedia  from './CheckFileMedia';
 
+type LessonsTypes = {
+  idLesson: string,
+  nameLesson: string,
+  nameModule: string,
+  orderModule: number,
+  isVisualized: boolean
+}
 
-export function FolderFileMedia(){ 
+type PropsType = {
+  name: string,
+  dataLesson: LessonsTypes[],
+  order: number
+}
+
+export function FolderFileMedia({name, dataLesson, order}: PropsType){
     const [hidden, togglerHidden] = useState(false);
     const [isIconFolderOpen, togglerIsIconFolderOpen] = useState(false);
+
+    let coutVisualizedLessons = 0;
+    dataLesson.forEach((lesson) => {
+      if(lesson.isVisualized){
+        coutVisualizedLessons++;
+      }
+    })
 
     function updateVisibilityContainer(){
         togglerHidden(!hidden);
         togglerIsIconFolderOpen(!isIconFolderOpen);
     }
-    
+
     return (
         <div className={styles.containerContent} >
             <div className={styles.headerFolderFileMedia} onClick={updateVisibilityContainer}>
                 {isIconFolderOpen ? (<VscFolderOpened className={styles.icons}/>) : (<VscFolder className={styles.icons} />)}
                 <div className={styles.informationModule}>
-                    <span className={styles.nivelModule}>Nivel 1</span>
-                    <span className={styles.nameModule}>Estruturas de dados básicas</span>
+                    <span className={styles.nivelModule}>Nivel {order}</span>
+                    <span className={styles.nameModule}>{name}</span>
                 </div>
-                <span className={styles.progressModule}>3 / 6</span>
+                <span className={styles.progressModule}>{coutVisualizedLessons} / {dataLesson.length}</span>
             </div>
             <div className={(hidden == true ? styles.mainFileVisible : styles.mainFileInvisible)}>
-                <CheckFileMedia {...{isVisualized: true, nameClassRoom: "aula sobre listas encadeadas 1 com alguns exemplos praticos"}}/>
-                <CheckFileMedia {...{isVisualized: false, nameClassRoom: "aula sobre listas encadeadas 4"}}/>
-                <CheckFileMedia {...{isVisualized: true, nameClassRoom: "aula sobre listas encadeadas 1 com alguns exemplos praticos"}}/>
-                <CheckFileMedia {...{isVisualized: false, nameClassRoom: "aula sobre listas encadeadas 4"}}/>
-                <CheckFileMedia {...{isVisualized: true, nameClassRoom: "aula sobre listas encadeadas 1 com alguns exemplos praticos"}}/>
-                <CheckFileMedia {...{isVisualized: false, nameClassRoom: "aula sobre listas encadeadas 4"}}/>                
+              {dataLesson.map((lesson) => {
+                return <CheckFileMedia key={lesson.idLesson} {...{isVisualized: lesson.isVisualized, nameLesson: lesson.nameLesson, nameMediaVideo: lesson.nameLesson}}/>
+              })}
             </div>
         </div>
     );

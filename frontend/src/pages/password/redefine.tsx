@@ -17,7 +17,7 @@ export default function RedefinePassword(){
              <p>.Click no link presente no email.</p>
            </span>
             <div className={styles.resetMain}>
-                <InputPlaceholderUp label="Seu e-mail" type={true}/>
+                <InputPlaceholderUp label="Seu e-mail" type="text"/>
                 <button className={styles.button}>Enviar</button>
             </div>
         </div>

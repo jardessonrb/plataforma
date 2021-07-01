@@ -1,18 +1,24 @@
+import { InputHTMLAttributes } from 'react';
 import styles from '../styles/components/InputPlaceholderUp.module.css';
 
-type ParamsComponent = {
-    label: string;
-    type: boolean;
+export type InputPlaceholderUpProps = {
+  label: string;
+} & InputHTMLAttributes<HTMLInputElement>;
+
+const InputPlaceholderUp = ({ label, ...props }: InputPlaceholderUpProps) => {
+
+  return (
+    <div className={styles.containerContent}>
+      <label className={styles.labelCustomInput}>
+        <input
+          className={styles.inputCustomInput}
+          {...props}
+        />
+        <p className={styles.pCustomInput}>{label}</p>
+      </label>
+    </div>
+  );
+
 }
 
-export default function InputPlaceholderUp({label, type}: ParamsComponent){
-
-    return(
-        <div className={styles.containerContent}>
-            <label className={styles.labelCustomInput}>
-                <input className={styles.inputCustomInput} type={type ? "text " : "password"} placeholder = " "/>
-                <p className={styles.pCustomInput}>{label}</p>
-            </label>
-        </div>
-    );
-}
+export default InputPlaceholderUp;

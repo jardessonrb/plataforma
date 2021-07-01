@@ -1,6 +1,7 @@
 .containerContent{
     display: grid;
     grid-template-rows: 8vh 92vh;
+    height: 100vh;
 }
 .header{
     grid-area: top;
@@ -22,7 +23,7 @@
 }
 
 .containerContent{
-    grid-template-areas: 
+    grid-template-areas:
     "top"
     "content"
     "footer"
@@ -67,8 +68,8 @@
     height: 1.5rem;
     text-align: center;
     border-radius: 50%;
-    font-weight: bold;   
-    margin-left: -0.9rem; 
+    font-weight: bold;
+    margin-left: -0.9rem;
     margin-top: -0.5rem;
 }
 
@@ -82,8 +83,7 @@
 .main .mainCenter{
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;    
-    
+    overflow-y: scroll;
 }
 
 .main .mainCenter .controlPreviouNext{
@@ -123,14 +123,21 @@
 }
 
 .main .mainCenter .containerMedia{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem 6rem 6rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1.5rem 2rem;
 }
-.main .mainCenter .containerMedia>span{
-    margin-top: 2rem;
-    font-size: 3rem;    
+
+.main .mainCenter .containerMedia .areMedia{
+  max-width: 100%;
+}
+
+.main .mainCenter .containerMedia h2{
+  font-size: 2rem;
+  margin-left: 4rem;
+  margin-top: 0.8rem;
 }
 
 .icons{
@@ -153,11 +160,11 @@
     }
 }
 @media screen and (max-width: 610px) {
-    
+
     .main .mainCenter .containerMedia{
         justify-content: center;
         padding: 1rem;
-        
+
     }
 }
 
